@@ -7,6 +7,11 @@ type conversion hapens when
 a) type compatible
 b) destination type > source type
 
+we can call aslo
+implicit conversion
+widening conversion
+
+--------------------------------------------  code  -----------------------------------
 
 import java.util.*;
 

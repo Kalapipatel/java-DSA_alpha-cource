@@ -1,0 +1,22 @@
+type conversion ma basically ochi space vada type thi vadhu space vada type ma apne convert kari sakiye
+jem ke
+
+byte -> sort -> int -> float -> long -> double
+
+type conversion hapens when
+a) type compatible
+b) destination type > source type
+
+
+import java.util.*;
+
+public class rough{
+    public static void main(String args[]){
+        // int a = 25;
+        // long b = a;        // right code
+
+        long a = 25;
+        int b = a;
+        System.out.println(b); // throws an error
+    }
+}

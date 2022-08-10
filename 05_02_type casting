@@ -1,0 +1,25 @@
+type casting vo conversion he jisko java allow nai karti
+java bolti he ki usme data loss ho sakta he 
+like agar tum float(25.12) ko int me covnert jau to desimal ke bad vale numbers ko int me convert nai kar pate ho
+isliye us data ka loss ho jata he
+but agar hame us data se koi matlab nai to ham usko int me convet kar sakte he or is process ko type casting bolte he
+
+-------------------------------------------  code  -----------------------------------
+
+import java.util.*;
+
+public class rough{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        // float a = 25.12;
+        // int b = a;
+        // System.out.println(b); //throws an error
+
+        // 'lossy conversion' asa erroe ayenga
+
+        float a = 25.12f;
+        int b = (int)a;
+        System.out.println(b);
+
+    }
+}

@@ -1,0 +1,4 @@
+Type Promotion in Expewssions
+
+1) Java automatically promotes each byte,sort,or char operand to int when evaluating an expression.
+2) If one operand is long,float or double the whole expression is promoted to long,float or double respectively.

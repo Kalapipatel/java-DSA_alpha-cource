@@ -1,4 +1,89 @@
-Type Promotion in Expewssions
+Type Promotion in Expressions
 
 1) Java automatically promotes each byte,sort,or char operand to int when evaluating an expression.
 2) If one operand is long,float or double the whole expression is promoted to long,float or double respectively.
+
+char a = 'a';
+sort b = 50;
+
+to ye char ko bhi pehle int me cinvert karenga or sort ko bhi pehle int me convert karenga or ans bhi int me hi denga
+
+example
+
+import java.util.*;
+
+public class rough{
+    public static void main(String args[]){
+        char a = 'a';
+        char b = 'b';
+        System.out.println((int)a);
+        System.out.println((int)b);
+        System.out.println(b-a);
+    }
+}
+
+output:
+97
+98
+1 
+
+example 2:
+import java.util.*;
+
+public class rough{
+    public static void main(String args[]){
+        sort  a = 5;
+        byte b = 25;
+        char c = 'c';
+        byte bt = a+b+c;
+    }
+}
+
+output:
+possible lossy conversion from 
+int to byte
+
+byte bt = (byte)(a+b+c);
+System.out.println(bt);
+
+output:
+-127
+
+if hame fir bhi byte me convert karna ho to ham type casting se kar sakte he jisme hamara data loss ho skata he
+
+ab 2nd stetment---------------------------------------------------------------------
+
+example:
+import java.util.*;
+
+public class rough{
+    public static void main(String args[]){
+        int a =10;
+        float b = 20.25f;
+        long c = 25;
+        double d = 30;
+        int ans = a+b+c+d;
+        System.out.println(ans);
+    }
+}
+output:
+possible lossy conversion from double to int
+
+iska matlab ye he ki ans double data type ka tha or hamne int kara to dikkat ho gai;
+
+exapmple 2:
+
+// wrong codee
+byte b = 5;
+byte a = b*2;
+sout(a);
+
+output:
+possible lossy conversion from int to byte
+
+// right code
+byte b = 5;
+byte a = (byte)(b*2);
+
+output:
+10

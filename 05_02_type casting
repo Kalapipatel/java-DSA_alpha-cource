@@ -1,6 +1,6 @@
 type casting vo conversion he jisko java allow nai karti
 java bolti he ki usme data loss ho sakta he 
-like agar tum float(25.12) ko int me covnert jau to desimal ke bad vale numbers ko int me convert nai kar pate ho
+like agar tum float(25.12) ko int me covnert krne jau to desimal ke bad vale numbers ko int me convert nai kar pate ho
 isliye us data ka loss ho jata he
 but agar hame us data se koi matlab nai to ham usko int me convet kar sakte he or is process ko type casting bolte he
 

@@ -1,0 +1,40 @@
+import java.util.*;
+
+class rough3{
+    public static void main(String main[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number : ");
+        int n = sc.nextInt();
+
+        convert(n); 
+        
+    }
+
+    public static void convert(int n){
+
+        int sum=0;
+        int i=0;
+        int flag=0;
+    while(n != 0){
+        int var = n%10;
+
+        if(var == 1 || var == 0){
+            int k = (int) (var*Math.pow(2,i));
+            sum += k;
+    
+            n /= 10;
+            i++;
+        }
+        else{
+            flag++;
+            System.out.println("enter the valid binary number");
+            break;
+        }
+
+    }  
+    if(flag == 0){
+        System.out.println(sum);
+    }
+
+    }
+}

@@ -1,0 +1,89 @@
+// main code
+import java.util.*;
+
+class rough3{
+
+	public static void decToBin(int n){
+		int mynum = n;
+		int pow = 0;
+		int binNum = 0;
+
+		while(n != 0){
+			int rem = n % 2;
+			binNum = binNum + (rem * (int)Math.pow(10, pow));
+			pow++;
+			n /= 2;
+		}
+		System.out.println("binary of "+mynum+" = "+binNum);
+	}
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int k = sc.nextInt();
+		decToBin(k);
+	}
+}
+
+---------------------------------------------------------------------------------------------
+
+// question for practice
+
+Write a PAC, Pseudocode and a Java program using class, object and function to read any two decimal numbers and convert it into the equivalent of binary in 8 bits representation.Compare and count how many times the bit change is occurred.
+For example, the binary representation of 10 is 00001010 and binary equivalent of 9 is 00001001 and hence 2 times the bit change occurred.
+Input Format:
+
+Read 2 decimal numbers
+
+Output Format:
+
+Count of bit change
+
+
+----------------------------------------------------------------------------------------------
+
+import java.util.*;
+
+class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        
+        changeInBit b1 = new changeInBit();
+        b1.convert(a,b);
+
+    }
+}
+
+class changeInBit{
+    
+    int arr1[] = new int[8];
+    int arr2[] = new int[8];
+    int index1 = 0;int index2 = 0; 
+    int count=0;
+    
+    
+    void convert(int n1, int n2){
+        while(n1>0){
+            arr1[index1] = n1 % 2;
+            
+            n1 = n1/2;
+            index1++;
+            
+        }
+        while(n2>0){
+            arr2[index2] = n2 % 2;
+            n2 = n2/2;
+            index2++;
+        }
+        
+        
+        for(int i = 7; i>=0; i--){
+             if(arr1[i] != arr2[i]){
+                 count++;
+             }
+        }
+        System.out.println(count);
+    }
+}

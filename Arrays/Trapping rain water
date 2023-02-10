@@ -1,0 +1,30 @@
+import java.util.*;
+
+class rough3{
+    public static void main(String[] args) {
+        int arr[] = {5,4,3,2,1,0,4};
+        int n = arr.length;
+        int sum=0;
+        
+        for(int i=0; i<n; i++){
+            int right=arr[i]; int left=arr[i];
+            
+            for(int j=i+1; j<n; j++ ){
+                if(arr[j] > right){
+                    right = arr[j];
+                }
+            }
+            for(int k=i-1; k>=0; k--){
+                if(arr[k] > left){
+                    left = arr[k];
+                }
+            }
+
+            int wcap = Math.min(right, left);
+            int storage = wcap - arr[i];
+            
+            sum += storage;
+        }
+        System.out.println("the capacity of the storage is : " +  sum);
+    }
+}

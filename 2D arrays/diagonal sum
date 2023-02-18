@@ -1,7 +1,31 @@
 import java.util.*;
 
 class rough3{
-    public static void diagonalsum(int matrix[][]){
+    
+
+    public static void main(String[] args) {
+        
+        int arr1[][] = {{1, 2, 3, 4},
+                       {5, 6, 7, 8},
+                       {9,10,11,12}, 
+                       {13,14,15,16} };
+        
+        int arr2[][] = {{0, 1, 2},
+                        {3, 4, 5},
+                        {6, 7, 8},}; 
+                         
+        diagonalsum(arr1);
+        diagonalsum(arr2);
+
+    }
+}
+
+
+
+
+-------------------------------------------------------------------- brute force ------------------------------------
+
+public static void diagonalsum(int matrix[][]){
         int pd = 0;
         int sd = 0;
         int sum = 0;
@@ -31,20 +55,3 @@ class rough3{
         System.out.println(sum);
 
     }
-
-    public static void main(String[] args) {
-        
-        int arr1[][] = {{1, 2, 3, 4},
-                       {5, 6, 7, 8},
-                       {9,10,11,12}, 
-                       {13,14,15,16} };
-        
-        int arr2[][] = {{0, 1, 2},
-                        {3, 4, 5},
-                        {6, 7, 8},}; 
-                         
-        diagonalsum(arr1);
-        diagonalsum(arr2);
-
-    }
-}

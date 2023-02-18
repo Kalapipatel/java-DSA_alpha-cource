@@ -1,0 +1,50 @@
+import java.util.*;
+
+class rough3{
+    public static void diagonalsum(int matrix[][]){
+        int pd = 0;
+        int sd = 0;
+        int sum = 0;
+        int middle = 0;
+        int n = matrix.length-1;
+
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<=n; j++){
+                if(i == j){
+                    pd += matrix[i][j];
+                }
+                if(i + j == n){
+                    sd += matrix[i][j];
+                }
+            }
+        }
+
+        if((n+1)%2 != 0){
+            middle = matrix[n/2][n/2];
+            sum = pd + sd - middle;
+        }
+        else{
+            sum = pd + sd;
+        }
+        System.out.println(pd);
+        System.out.println(sd);
+        System.out.println(sum);
+
+    }
+
+    public static void main(String[] args) {
+        
+        int arr1[][] = {{1, 2, 3, 4},
+                       {5, 6, 7, 8},
+                       {9,10,11,12}, 
+                       {13,14,15,16} };
+        
+        int arr2[][] = {{0, 1, 2},
+                        {3, 4, 5},
+                        {6, 7, 8},}; 
+                         
+        diagonalsum(arr1);
+        diagonalsum(arr2);
+
+    }
+}

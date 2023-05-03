@@ -1,1 +1,40 @@
-import 
+import java.util.*;
+
+class rough1 {
+
+    public static void printletters(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            System.out.print(str.charAt(i) + " ");
+        }
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        // input next() and nextLie()
+        // if sc.next() than it will only input one word
+        // if sc,nextLine() than it will input all line include space
+
+        System.out.print("input your string : ");
+        String str = sc.next();
+        System.out.println(str);
+
+        System.out.print("input your string : ");
+        String str2 = sc.nextLine();
+        System.out.println(str2);
+
+        // for length of the string
+        int len = str2.length();
+        System.out.println(len);
+
+        // concatination
+        String fname = "kalapi";
+        String lname = "patel";
+        String fullname = fname + "  " + lname;
+
+        System.out.println(fullname);
+
+        // chatAt function
+        printletters(fullname);
+    }
+}

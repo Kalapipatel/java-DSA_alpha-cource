@@ -1,0 +1,36 @@
+to compare two strings you must use .equals function
+syntax ->   str1.equals(str2)
+
+
+import java.util.*;
+
+public class rough2 {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = "kalapi";
+        String s2 = "kalapi";
+        String s3 = new String("kalapi");
+
+        System.out.println("by comparing s1 and s2 : ");
+        if (s1 == s2) {
+            System.out.println("equals ");
+        } else {
+            System.out.println("not equals");
+        }
+
+        System.out.println("by comparing s1 and s3 : ");
+        if (s1 == s3) {
+            System.out.println("equals ");
+        } else {
+            System.out.println("not equals");
+        }
+
+        System.out.println("by using str1.equals(str2) function");
+        if (s1.equals(s3)) {
+            System.out.println("equals ");
+        } else {
+            System.out.println("not equals");
+        }
+    }
+}

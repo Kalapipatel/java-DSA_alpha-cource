@@ -1,0 +1,14 @@
+import java.util.*;
+
+class rough {
+    public static void main(String args[]) {
+
+        StringBuilder sb = new StringBuilder("");
+
+        for (char a = 'a'; a <= 'z'; a++) {
+            sb.append(a);
+            // O(n)
+        }
+        System.out.println(sb);
+    }
+}

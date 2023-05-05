@@ -1,0 +1,12 @@
+package Bitmanipulation;
+
+public class powerof2 {
+    public static Boolean chechker(int n) {
+        return (n & (n - 1)) == 0;
+    }
+
+    public static void main(String args[]) {
+        System.out.println(chechker(16));
+        System.out.println(chechker(13));
+    }
+}

@@ -1,0 +1,20 @@
+// f(n) = f(n-1) + n
+
+package Recursion;
+
+public class increasing {
+    public static void printDec(int n) {
+        if (n == 1) {
+            System.out.print(n + " ");
+            return;
+        }
+        printDec(n - 1);
+        System.out.print(n + " ");
+        // by changing just this 2 lines and we get our output
+    }
+
+    public static void main(String args[]) {
+        int n = 10;
+        printDec(n);
+    }
+}

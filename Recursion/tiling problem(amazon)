@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class HelloWorld {
+    public static int tilingproblem(int n){
+        if(n == 0 || n == 1){
+            return 1;
+        }
+        // kaam
+        // for vertical
+        int fnm1 = tilingproblem(n-1);
+        
+        // for horizontal
+        int fnm2 = tilingproblem(n-2);
+        
+        return  fnm1 + fnm2;
+    }    
+
+    public static void main(String[] args) {
+        int n = 4; // 5 output
+        System.out.println(tilingproblem(n));
+        int n = 5; // 8 output
+        System.out.println(tilingproblem(n));
+    }
+}

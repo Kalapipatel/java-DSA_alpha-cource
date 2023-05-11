@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class HelloWorld {
+    public static int optimizedpow(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        
+        int halfpow = optimizedpow(x, n/2);
+        int half = halfpow * halfpow;
+        
+        if(n % 2 != 0){
+            return x*half;
+        }
+        return half;
+    }
+
+    public static void main(String[] args) {
+        
+        System.out.println(optimizedpow(2,10));
+    }
+}
+
+// time complexity = O9log(n))
+
+/*
+if we right function like this than that is not an efficient way to write the code
+
+int half = optimizedpow(x, n/2) * optimizedpow(x, n/2);
+
+because in this, the function call happens 2 times and that will make the time complexity O(n)
+*/

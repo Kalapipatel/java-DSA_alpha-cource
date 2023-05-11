@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class HelloWorld {
+    public static void removeDup(String str, int idx, StringBuilder newstr, boolean map[]){
+        if(idx == str.length()){
+            System.out.prtinln(newstr);
+            return;
+        }
+        
+        //Kaam
+        char ch = str.charAt(idx);
+        if(map[ch - 'a'] == true){
+            //duplicate
+            removeDup(str, idx+1, newstr, map);
+        } else{
+            map[ch - 'a'] = true;
+            removeDup(str, idx+1, newstr.append(ch), map);
+        }
+    }  
+
+    public static void main(String[] args) {
+        String str = "appnnacollege";
+        removeDup(str, 0, new StringBuilder(""), new boolean[26]);
+    }
+}

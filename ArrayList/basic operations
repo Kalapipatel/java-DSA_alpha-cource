@@ -40,6 +40,8 @@ class rough1 {
         //also we can add element at any index by this comand
         list.add(1,10);
         System.out.println(list);
-        
+
+        //size of arraylist
+        System.out.println(list.size());
     }
 }

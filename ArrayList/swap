@@ -1,0 +1,24 @@
+import java.util.*;
+
+class rough1 {
+    public static void swap(ArrayList<Integer> list, int a, int b) {
+        int temp = list.get(a);
+        list.set(a, list.get(b));
+        list.set(b, temp);
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        int idx = 1, idx2 = 3;
+        System.out.println(list);
+        swap(list, idx, idx2);
+        System.out.println(list);
+    }
+}

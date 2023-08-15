@@ -1,3 +1,9 @@
+Fimd if any pair in a sorted arrayList has a target sum
+
+List = [1,2,3,4,5,6] target = 5
+
+-------------------------------------------------------------------------------
+
 import java.util.*;
 
 class rough1 {

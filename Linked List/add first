@@ -20,11 +20,17 @@ class linkedlist{
             head = tail = newNode;
             return;
         }
-        
+
         // step2 -> new node next = head
         newNode.next = head;
 
         // step3 -> head = newnode
         head = newNode;
+    }
+
+    public static void main(String[] args) {
+        linkedlist ll = new linkedlist();
+        ll.addFirst(1);   
+        ll.addFirst(2);   
     }
 }

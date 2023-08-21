@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class rough2 {
+    public static void lonely(ArrayList<Integer> list) {
+        int n = list.size();
+
+        for (int i = 0; i < n; i++) {
+            int temp = list.get(i);
+            int temp1 = list.get(i) - 1;
+            int temp2 = list.get(i) + 1;
+            int k = 0;
+
+            for (int j = 0; j < n; j++) {
+                // System.out.print("---->" + list.get(j) + " ");
+                if ((list.get(j) == temp) || (list.get(j) == temp1) || (list.get(j) == temp2)) {
+                    k--;
+                }
+            }
+
+            if (k >= -1)
+                System.out.print(list.get(i) + " ");
+
+        }
+    }
+
+    public static void main(String args[]) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        // list.add(10);
+        // list.add(6);
+        // list.add(5);
+        // list.add(8); // op: 10 8
+        list.add(1);
+        list.add(3);
+        list.add(5);
+        list.add(3); // op: 1 5
+
+        lonely(list);
+
+    }
+}

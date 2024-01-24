@@ -16,7 +16,7 @@ class subTree{
             return true;
         }
 
-        else if(node == null && subroot == null || node.data != subroot.data){
+        else if(node == null || subroot == null || node.data != subroot.data){
             return false;
         }
 
